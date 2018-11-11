@@ -166,3 +166,23 @@ func TestServerCryptoGood(t *testing.T) {
 		assert.Equal(t, test.cipher, encrypted, "server encrypt")
 	}
 }
+
+func TestInvalidServerKey(t *testing.T) {
+	var err error
+
+	_, err = ServerEncrypt([]byte{}, 0x10, 0x00)
+	assert.EqualError(t, err, "key 0x10 is too large (maximum key is 0x0f)")
+
+	_, err = ServerDecrypt([]byte{0x00, 0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x01}, 0x10)
+	assert.EqualError(t, err, "key 0x10 is too large (maximum key is 0x0f)")
+}
+
+func TestInvalidServerBuffer(t *testing.T) {
+	var err error
+
+	_, err = ServerDecrypt([]byte{}, 0x00)
+	assert.EqualError(t, err, "buffer too small (have 0 bytes, need at least 8.)")
+
+	_, err = ServerDecrypt([]byte{0x00, 0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x01, 0xff}, 0x00)
+	assert.EqualError(t, err, "EOF")
+}

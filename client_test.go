@@ -73,3 +73,20 @@ func TestClientCryptoGood(t *testing.T) {
 		assert.Equal(t, test.cipher, encrypted, "client encrypt")
 	}
 }
+
+func TestInvalidClientKey(t *testing.T) {
+	var err error
+
+	_, err = ClientEncrypt([]byte{}, 0x10, 0x00)
+	assert.EqualError(t, err, "key 0x10 is too large (maximum key is 0x0f)")
+
+	_, err = ClientDecrypt([]byte{0x00, 0x01, 0x00, 0x00, 0x00}, 0x10)
+	assert.EqualError(t, err, "key 0x10 is too large (maximum key is 0x0f)")
+}
+
+func TestInvalidClientBuffer(t *testing.T) {
+	var err error
+
+	_, err = ClientDecrypt([]byte{}, 0x00)
+	assert.EqualError(t, err, "buffer too small (have 0 bytes, need at least 5.)")
+}
