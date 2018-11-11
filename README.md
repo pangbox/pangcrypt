@@ -2,6 +2,9 @@
 
 PangCrypt is an implementation of the PangYa transport cryptography. These routines are used by the PangYa Client and Server to obfuscate communication.
 
+## Pang.dll
+There is an implementation of HSReina's Pang.dll interface using PangCrypt in the `dll/pang` package.
+
 ## Other Implementations
 
 PangCrypt is largely based on analysis of the messages using Wireshark. The tables of data used in the crypto routines were dumped from memory.
@@ -22,6 +25,8 @@ The terminology used in PangCrypt is as follows:
   * Client Decrypt - Decrypts packets from client, sent to server.
   * Server Encrypt - Encrypts packets from server, sent to client.
   * Server Decrypt - Decrypts packets from server, sent to client.
+
+# PangYa Transport Encryption
 
 ## Hello packet
 
@@ -61,7 +66,7 @@ The encrypted packet adds 5 bytes to the front of the packet. Some bytes of plai
   * The fifth byte is where the key comes into play. There are two tables, each 0x1000 bytes long. You pick this byte out of the first table, by grabbing the index `key << 8 + salt`. Later, it is XOR'd by the same index of the second table.
   * Each byte from the end to index 8 is XOR'd with the byte 4 positions behind it.
 
-# Anatomy of a server-side packet
+## Anatomy of a server-side packet
 
 Here's an encrypted authorization packet, sent from a PangYa server:
 
