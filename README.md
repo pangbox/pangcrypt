@@ -1,4 +1,4 @@
-# PangCrypt
+# PangCrypt [![Build Status](https://travis-ci.org/pangbox/pangcrypt.svg)](https://travis-ci.org/pangbox/pangcrypt) [![codecov.io](https://codecov.io/github/pangbox/pangcrypt/coverage.svg?branch=master)](https://codecov.io/github/pangbox/pangcrypt?branch=master) [![godoc.org](https://img.shields.io/badge/godoc-reference-5272B4.svg?style=flat-square)](https://godoc.org/github.com/pangbox/pangcrypt) [![Go Report Card](https://goreportcard.com/badge/github.com/pangbox/pangcrypt)](https://goreportcard.com/report/github.com/pangbox/pangcrypt)
 
 PangCrypt is an implementation of the PangYa transport cryptography. These routines are used by the PangYa Client and Server to obfuscate communication.
 
