@@ -5,6 +5,9 @@ PangCrypt is an implementation of the PangYa transport cryptography. These routi
 ## Pang.dll
 There is an implementation of HSReina's Pang.dll interface using PangCrypt in the `dll/pang` package.
 
+## Unpangle
+There's an included tool for decrypting PangYa packets directly in the `cmd/unpangle` package.
+
 ## Other Implementations
 
 PangCrypt is largely based on analysis of the messages using Wireshark. The tables of data used in the crypto routines were dumped from memory.
