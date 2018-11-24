@@ -29,7 +29,7 @@ $ go get -v github.com/pangbox/pangcrypt/cmd/unpangle
 $ unpangle -help
 ```
 
-> You must have the [Go toolchain](https://golang.org/dl/) and [Git](https://git-scm.com/downloads) installed. Also, in order to be able to run Unpangle after running `go get`, you will need to ensure that your `$PATH` (Unix-like) or `%PATH%` (Windows) environment variable contains `$PATH/go/bin` (Unix-like) or `C:\Users\[your username]\go\bin` (Windows.)
+> You must have the [Go toolchain](https://golang.org/dl/) and [Git](https://git-scm.com/downloads) installed. Also, in order to be able to run Unpangle after running `go get`, you will need to ensure that your `$PATH` (Unix-like) or `%PATH%` (Windows) environment variable contains `$HOME/go/bin` (Unix-like) or `C:\Users\[your username]\go\bin` (Windows.)
 >
 > * [Adding a folder to $PATH (Unix-like)](https://stackoverflow.com/a/7360945)
 > * [Adding a folder to %PATH% (Windows)](https://stackoverflow.com/a/44272417)
