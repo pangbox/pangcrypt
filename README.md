@@ -14,7 +14,7 @@ PangCrypt is largely based on analysis of the messages using Wireshark. The tabl
 
 There is some prior art available. These were not used to implement PangCrypt in any way, but may serve as useful references.
 
-  * [daredevils/Pang-dll](https://github.com/davedevils/Pang-dll): This seems to be the most complete library available, appearing to contain all of the necessary operations. However, it did not seem to produce correct results in my cursory testing. I did not debug the incorrect results. It is possible this library works if used correctly.
+  * [davedevils/Pang-dll](https://github.com/davedevils/Pang-dll): This seems to be the most complete library available, appearing to contain all of the necessary operations. However, it did not seem to produce correct results in my cursory testing. I did not debug the incorrect results. It is possible this library works if used correctly.
   * [Lucas-Firefox/Pang.dll-Encrypt-Decrypt-by-Firefox](https://github.com/Lucas-Firefox/Pang.dll-Encrypt-Decrypt-by-Firefox): This code appears to be missing important parts of the crypto routines, including the headers and LZO compression. For this reason, I did not test it.
   * [Lucas-Firefox/Source:packets tool/crypts.pas](https://github.com/Lucas-Firefox/Source/blob/master/packets%20tool/crypts.pas): This code looks like it was extracted out of a binary containing a C implementation of the crypto routines, then embedded in a Pascal program using asm blocks. I did not read or evaluate the actual routines, though the names of the routines and other hints suggest this is a complete implementation of the algorithm. I did not test it.
 
