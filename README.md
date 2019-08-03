@@ -1,5 +1,7 @@
 # PangCrypt [![Build Status](https://travis-ci.org/pangbox/pangcrypt.svg)](https://travis-ci.org/pangbox/pangcrypt) [![codecov.io](https://codecov.io/github/pangbox/pangcrypt/coverage.svg?branch=master)](https://codecov.io/github/pangbox/pangcrypt?branch=master) [![godoc.org](https://img.shields.io/badge/godoc-reference-5272B4.svg?style=flat-square)](https://godoc.org/github.com/pangbox/pangcrypt) [![Go Report Card](https://goreportcard.com/badge/github.com/pangbox/pangcrypt)](https://goreportcard.com/report/github.com/pangbox/pangcrypt)
 
+_This project is not endorsed by or related to Ntreev Soft Corporation. See [Trademark Notice](#trademark-notice) for more information._
+
 PangCrypt is an implementation of the PangYa transport cryptography. These routines are used by the PangYa Client and Server to obfuscate communication.
 
 ## Pang.dll
@@ -100,3 +102,6 @@ Server-side packets have an 8-byte long header.
   * The next four bytes are tricky. It appears to be a sort of checksum based on the length of the original data. If you encode this data wrong, the PangYa client will crash - though it is unclear if that is defensive or if it actually uses this value to allocate a buffer.
   * Each byte from the end to index 10 are XOR'd with the byte 4 positions behind it.
   * The byte at index 7 is XOR'd with the second crypt table at index `key << 8 + salt`.
+
+## Trademark Notice
+PangYa is a registered trademark of Ntreev Soft Co., Ltd. Corporation. Pangbox is not endorsed or related to Ntreev Soft Co., Ltd. Corporation in any way. "PangYa" and related trademarks are used strictly for informational purposes.

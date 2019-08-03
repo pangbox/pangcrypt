@@ -1,6 +1,6 @@
 # ISC License
 
-Copyright © 2018, John Chadwick <johnwchadwick@gmail.com>
+Copyright © 2018-2019, John Chadwick <johnwchadwick@gmail.com>
 
 Permission to use, copy, modify, and/or distribute this software for any purpose
 with or without fee is hereby granted, provided that the above copyright notice

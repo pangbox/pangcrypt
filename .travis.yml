@@ -1,17 +1,16 @@
 language: go
 
 go:
-  - '1.8'
   - '1.9'
   - '1.10'
   - '1.11'
-  - tip
+  - '1.12'
 
 script:
   - go test -coverprofile=coverage.txt -covermode=atomic
-  - "if [[ $TRAVIS_GO_VERSION == 1.11 ]]; then go get github.com/alecthomas/gometalinter; fi"
-  - "if [[ $TRAVIS_GO_VERSION == 1.11 ]]; then gometalinter --install; fi"
-  - "if [[ $TRAVIS_GO_VERSION == 1.11 ]]; then gometalinter; fi"
+  - "if [[ $TRAVIS_GO_VERSION == 1.12 ]]; then go get github.com/alecthomas/gometalinter; fi"
+  - "if [[ $TRAVIS_GO_VERSION == 1.12 ]]; then gometalinter --install; fi"
+  - "if [[ $TRAVIS_GO_VERSION == 1.12 ]]; then gometalinter; fi"
 
 after_success:
   - bash <(curl -s https://codecov.io/bash)
