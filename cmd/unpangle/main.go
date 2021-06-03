@@ -7,7 +7,6 @@ import (
 	"log"
 	"os"
 	"strconv"
-	"strings"
 
 	"github.com/davecgh/go-spew/spew"
 	"github.com/pangbox/pangcrypt"
@@ -35,16 +34,27 @@ func main() {
 	var err error
 
 	packet := flag.Arg(0)
-	octets := strings.Split(packet, ":")
 	data := []byte{}
 
+	octet := make([]rune, 0, 2)
+
 	// Parse octet string.
-	for _, octet := range octets {
-		bits, err := strconv.ParseUint(octet, 16, 8)
-		if err != nil {
-			log.Fatalln("invalid octet:", err)
+	for _, nibble := range packet {
+		isHex := (nibble >= '0' && nibble <= '9') || (nibble >= 'a' && nibble <= 'f') || (nibble >= 'A' && nibble <= 'F')
+		if !isHex {
+			continue
 		}
-		data = append(data, byte(bits))
+
+		octet = append(octet, nibble)
+
+		if len(octet) == 2 {
+			bits, err := strconv.ParseUint(string(octet), 16, 8)
+			if err != nil {
+				log.Fatalln("invalid octet:", err)
+			}
+			data = append(data, byte(bits))
+			octet = octet[0:0]
+		}
 	}
 
 	// Select crypt function and configuration.
