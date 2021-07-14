@@ -3,7 +3,7 @@ module github.com/pangbox/pangcrypt
 go 1.12
 
 require (
-	github.com/davecgh/go-spew v1.1.0
-	github.com/rasky/go-lzo v0.0.0-20151023001055-affec0788321
-	github.com/stretchr/testify v1.3.0
+	github.com/davecgh/go-spew v1.1.1
+	github.com/rasky/go-lzo v0.0.0-20200203143853-96a758eda86e
+	github.com/stretchr/testify v1.7.0
 )
