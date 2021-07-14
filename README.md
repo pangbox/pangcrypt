@@ -1,4 +1,4 @@
-# PangCrypt [![Build Status](https://travis-ci.org/pangbox/pangcrypt.svg)](https://travis-ci.org/pangbox/pangcrypt) [![codecov.io](https://codecov.io/github/pangbox/pangcrypt/coverage.svg?branch=master)](https://codecov.io/github/pangbox/pangcrypt?branch=master) [![godoc.org](https://img.shields.io/badge/godoc-reference-5272B4.svg?style=flat-square)](https://godoc.org/github.com/pangbox/pangcrypt) [![Go Report Card](https://goreportcard.com/badge/github.com/pangbox/pangcrypt)](https://goreportcard.com/report/github.com/pangbox/pangcrypt)
+# PangCrypt [![godoc.org](https://img.shields.io/badge/godoc-reference-5272B4.svg?style=flat-square)](https://godoc.org/github.com/pangbox/pangcrypt) [![Go Report Card](https://goreportcard.com/badge/github.com/pangbox/pangcrypt)](https://goreportcard.com/report/github.com/pangbox/pangcrypt) [![Go](https://github.com/pangbox/pangcrypt/actions/workflows/go.yml/badge.svg)](https://github.com/pangbox/pangcrypt/actions/workflows/go.yml)
 
 _This project is not endorsed by or related to Ntreev Soft Corporation. See [Trademark Notice](#trademark-notice) for more information._
 
